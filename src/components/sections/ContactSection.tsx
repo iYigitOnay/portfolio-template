@@ -1,9 +1,8 @@
-import { getAbout, getReferences } from "@/lib/server/content";
+import {getReferences } from "@/lib/server/content";
 import Image from "next/image";
 import { ContactForm } from "./ContactForm";
 
 export function ContactSection() {
-  const about = getAbout();
   const refs = getReferences();
   const email = "ihsanyigitonay@gmail.com"; // istersen about.json'a alırız
 

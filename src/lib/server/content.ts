@@ -33,6 +33,7 @@ export type ExperienceItem = {
   org: string;
   period: string;
   desc: string;
+  logo?: string;
 };
 
 function base(...segments: string[]) {
