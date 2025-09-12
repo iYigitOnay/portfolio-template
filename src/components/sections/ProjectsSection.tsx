@@ -23,7 +23,7 @@ export function ProjectsSection() {
         {projects.map((p) => (
           <div
             key={p.slug}
-            className="rounded-2xl overflow-hidden blue-outline hover:translate-y-[-2px] transition"
+            className="rounded-2xl overflow-hidden blue-outline hover:translate-y-[-2px] transition flex flex-col min-h-[360px]"
           >
             {/* Üst görsel alanı */}
             <div className="relative h-40 w-full bg-white">
@@ -39,29 +39,30 @@ export function ProjectsSection() {
             </div>
 
             {/* İçerik */}
-            <div className="p-4">
-              <h3 className="text-lg font-semibold">{p.title}</h3>
-              <p className="opacity-80 mt-1 text-sm">{p.summary}</p>
+            <div className="p-4 flex flex-col flex-1">
+              <div>
+                <h3 className="text-lg font-semibold">{p.title}</h3>
+                <p className="opacity-80 mt-1 text-sm">{p.summary}</p>
 
-              {/* Teknolojiler */}
-              {p.tags?.length ? (
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <span
-                      key={t}
-                      className="text-xs px-2 py-1 rounded-full border"
-                      style={{ borderColor: "var(--color-border)" }}
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              ) : null}
+                {/* Teknolojiler */}
+                {p.tags?.length ? (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="text-xs px-2 py-1 rounded-full border"
+                        style={{ borderColor: "var(--color-border)" }}
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
 
-              {/* Linkler */}
-              {/* Linkler */}
+              {/* Linkler – sabit altta */}
               {(p.links?.demo || p.links?.repo) && (
-                <div className="mt-4 flex items-center gap-3">
+                <div className="mt-auto flex items-center gap-3 pt-4">
                   {p.links.demo && (
                     <a
                       className="underline text-[var(--color-primary)]"

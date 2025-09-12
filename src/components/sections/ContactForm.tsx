@@ -26,7 +26,7 @@ export function ContactForm() {
       }}
     >
       <div>
-        <label className="block text-sm font-medium">Ad Soyad</label>
+        <label className="block text-sm font-medium">Name Surname</label>
         <input
           type="text"
           name="name"
@@ -44,7 +44,7 @@ export function ContactForm() {
         />
       </div>
       <div>
-        <label className="block text-sm font-medium">Mesaj</label>
+        <label className="block text-sm font-medium">Message</label>
         <textarea
           name="message"
           rows={4}
@@ -56,7 +56,7 @@ export function ContactForm() {
         type="submit"
         className="bg-[var(--color-primary)] text-white px-4 py-2 rounded-lg hover:opacity-90"
       >
-        Gönder
+        Send
       </button>
     </form>
   );

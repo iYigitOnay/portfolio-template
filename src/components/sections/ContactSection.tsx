@@ -1,4 +1,4 @@
-import {getReferences } from "@/lib/server/content";
+import { getReferences } from "@/lib/server/content";
 import Image from "next/image";
 import { ContactForm } from "./ContactForm";
 
@@ -18,7 +18,7 @@ export function ContactSection() {
         className="text-3xl md:text-4xl h2-title mt-2"
         style={{ color: "color-mix(in srgb, var(--color-primary) 80%, black)" }}
       >
-        Referanslar & İletişim
+        References & Contact{" "}
       </h2>
 
       {refs?.length ? (
@@ -58,7 +58,7 @@ export function ContactSection() {
       {/* Basit e-posta linki (opsiyonel) */}
       <div className="mt-6">
         <p className="opacity-80">
-          Direkt Ulaşım Sağlamak Adına:{" "}
+          To Provide Direct Transportation:{" "}
           <a
             className="underline text-[var(--color-primary)]"
             href={`mailto:${email}`}

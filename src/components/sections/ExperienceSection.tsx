@@ -16,7 +16,7 @@ export function ExperienceSection() {
         className="text-3xl md:text-4xl h2-title mt-2"
         style={{ color: "color-mix(in srgb, var(--color-primary) 80%, black)" }}
       >
-        Deneyim Ve Eğitim
+        Experience And Education
       </h2>
 
       <div className="mt-6 space-y-4">

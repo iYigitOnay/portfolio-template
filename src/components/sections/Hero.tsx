@@ -50,7 +50,7 @@ export function Hero({ title, subtitle, cta, avatarSrc }: Props) {
               ) : (
                 <div className="h-full w-full grid place-items-center bg-white/10">
                   <span className="text-sm text-blue-100/80">
-                    Profil Fotoğrafı
+                    Profile Photo
                   </span>
                 </div>
               )}

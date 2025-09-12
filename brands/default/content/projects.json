@@ -11,7 +11,7 @@
     "slug": "Nesnelerin interneti tabanlı akıllı çocuk odası",
     "title": "IoT based smart child room",
     "summary": "IoT based smart child room",
-    "tags": ["Kotlin", " ", "PostgreSQL"],
+    "tags": ["Kotlin", "MongoDB ", "NodeJs", "React Native", "TypeScript"],
     "links": {
       "demo": "#",
       "repo": "https://github.com/iYigitOnay/SmartChildRoom"

@@ -27,21 +27,21 @@ export function AboutSection() {
           <div className="badge-blue mb-3">{"</>"} Web Developer</div>
           <h3 className="font-semibold">Web Developer</h3>
           <p className="opacity-80 mt-1 text-sm">
-            React, Next.js, Tailwind ile modern arayüzler.
+            Modern interfaces with React, Next.js, Tailwind.{" "}
           </p>
         </div>
         <div className="p-5 rounded-2xl blue-outline blue-outline-soft transition">
           <div className="badge-blue mb-3">DB • API</div>
           <h3 className="font-semibold">Backend Developer</h3>
           <p className="opacity-80 mt-1 text-sm">
-            REST, JWT, veritabanı tasarımı ve bulut dağıtımı.
+            REST, JWT, database design and cloud deployment.{" "}
           </p>
         </div>
         <div className="p-5 rounded-2xl blue-outline blue-outline-soft transition">
           <div className="badge-blue mb-3">✍️</div>
           <h3 className="font-semibold">Content Creator</h3>
           <p className="opacity-80 mt-1 text-sm">
-            Teknik yazılar, demo videolar, dokümantasyon.
+            Technical articles, demo videos, documentation.{" "}
           </p>
         </div>
       </div>
