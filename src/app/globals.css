@@ -22,7 +22,7 @@ body {
 }
 
 .section {
-  scroll-margin-top: 84px; /* header ≈ 64–72px ise 80–90 arası idealdir */
+  scroll-margin-top: 84px; 
 }
 
 a {
@@ -163,15 +163,15 @@ a:hover {
   background: linear-gradient(90deg, #4169e1 0%, #0b0b10 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent; /* Safari/Chrome */
+  -webkit-text-fill-color: transparent; 
   display: inline-block;
-  line-height: 1.18; /* kuyruklar için yer aç */
-  padding-bottom: 0.12em; /* alt kesilmeyi önle */
-  text-shadow: 0 0 0 rgba(0, 0, 0, 0); /* bazı GPU clip bug'larına patch */
+  line-height: 1.18; 
+  padding-bottom: 0.12em; 
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .scrollbar-hidden {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
 
 .scrollbar-hidden::-webkit-scrollbar {

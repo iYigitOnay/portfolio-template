@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
@@ -64,7 +65,8 @@ export function Header({ brandName, socials }: Props) {
     </>
   );
 
-  const IconBtn = ({ href, title, children }: any) => (
+  type IconBtnProps = React.PropsWithChildren<{ href: string; title: string }>;
+  const IconBtn = ({ href, title, children }: IconBtnProps) => (
     <a
       href={href}
       target="_blank"
@@ -150,13 +152,12 @@ export function Header({ brandName, socials }: Props) {
         </div>
       </div>
 
-      {/* Mobil menü (royal blue zemin) */}
+      {/* Mobil menü */}
       {open && (
         <div className="md:hidden bg-[var(--color-primary)]">
           <nav className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-1">
-            <a className="text-white/90">
-              <NavLinks onClick={() => setOpen(false)} />
-            </a>
+            {/* Anchor içine anchor koymamak için NavLinks'i doğrudan render ediyoruz */}
+            <NavLinks onClick={() => setOpen(false)} />
           </nav>
         </div>
       )}

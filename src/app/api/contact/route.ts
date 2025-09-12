@@ -52,8 +52,9 @@ export async function POST(req: Request) {
 
     console.log("Mail sent:", info.messageId);
     return NextResponse.json({ ok: true });
-  } catch (err: any) {
-    console.error("API /contact HATA:", err?.message || err);
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error("API /contact HATA:", msg);
     return NextResponse.json(
       { ok: false, error: "Sunucu hatası" },
       { status: 500 }
