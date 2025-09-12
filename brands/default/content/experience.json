@@ -1,0 +1,16 @@
+[
+  {
+    "role": "Freelance Geliştirici",
+    "org": "Mely",
+    "period": "2023 - Devam Ediyor",
+    "desc": "Web ve mobil uygulama geliştirme, SEO optimizasyonu, backend ve frontend geliştirme, dijital pazarlama hizmetleri.",
+    "logo": "/Mely.png"
+  },
+  {
+    "role": "Software Engineer",
+    "org": "Mehmet Akif Ersoy Üniversitesi",
+    "period": "2023 - Devam Ediyor",
+    "desc": "Web uygulamaları geliştirme, veritabanı yönetimi, Backend ve Frontend geliştirme, yapay zeka ve yazılım projeleri.",
+    "logo": "/maku.png"
+  }
+]

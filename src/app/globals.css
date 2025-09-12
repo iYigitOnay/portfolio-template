@@ -1,26 +1,179 @@
 @import "tailwindcss";
 
+/* ===== Temel kök ayarları ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #ffffff;
+  --color-fg: #0b0b10;
+  --color-primary: #4169e1; /* royal blue */
+  --color-border: #e3e8f5;
+  --color-card: #ffffff;
+  --font-family: Inter, ui-sans-serif, system-ui;
+  --radius: 16px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-fg);
 }
+
+.section {
+  scroll-margin-top: 84px; /* header ≈ 64–72px ise 80–90 arası idealdir */
+}
+
+a {
+  text-underline-offset: 3px;
+}
+a:hover {
+  color: color-mix(in srgb, var(--color-white) 85%, black);
+}
+
+.glass {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+.glass-soft {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+.hover-rise {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.hover-rise:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.hero-wrap {
+  position: relative;
+  min-height: 80vh;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.3) 30%,
+    rgba(255, 255, 255, 0.85) 85%,
+    #fff 100%
+  );
+}
+
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  width: 18px;
+  height: 28px;
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+}
+.scroll-indicator::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--color-primary);
+  animation: scrollDot 1.6s ease-in-out infinite;
+}
+@keyframes scrollDot {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, 10px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--color-primary) 70%, white);
+  outline-offset: 2px;
+}
+
+/* Küçük yardımcılar */
+.border-color {
+  border-color: var(--color-border);
+}
+.text-muted {
+  color: color-mix(in srgb, var(--color-fg) 68%, white);
+}
+.bg-card {
+  background: var(--color-card);
+}
+
+/* --- Royal blue highlight helpers --- */
+.heading-eyebrow {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--color-primary) 85%, white);
+}
+
+.h2-title {
+  font-weight: 800;
+  line-height: 1.1;
+}
+.blue-outline {
+  border: 1px solid
+    color-mix(in srgb, var(--color-primary) 18%, var(--color-border));
+  box-shadow: 0 0 0 1px
+      color-mix(in srgb, var(--color-primary) 10%, var(--color-border)) inset,
+    0 6px 18px rgba(65, 105, 225, 0.08);
+}
+.blue-outline-soft:hover {
+  box-shadow: 0 0 0 1px
+      color-mix(in srgb, var(--color-primary) 22%, var(--color-border)) inset,
+    0 12px 28px rgba(65, 105, 225, 0.14);
+  transform: translateY(-2px);
+}
+
+.badge-blue {
+  display: inline-block;
+  background: color-mix(in srgb, var(--color-primary) 10%, white);
+  color: color-mix(in srgb, var(--color-primary) 90%, black 0%);
+  border-radius: 9999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gradient-blue-black {
+  background: linear-gradient(90deg, #4169e1 0%, #0b0b10 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Safari/Chrome */
+  display: inline-block;
+  line-height: 1.18; /* kuyruklar için yer aç */
+  padding-bottom: 0.12em; /* alt kesilmeyi önle */
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0); /* bazı GPU clip bug'larına patch */
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+} /* WebKit */

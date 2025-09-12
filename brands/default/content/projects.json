@@ -1,0 +1,21 @@
+[
+  {
+    "slug": "makutalk",
+    "title": "MAKUtalk",
+    "summary": "Social media platform for university students",
+    "tags": ["Next.js", "NodeJs", "mySQL", "Vue.js", "TypeScript"],
+    "links": { "demo": "#", "repo": "https://github.com/iYigitOnay/MAKUtalk" },
+    "cover": "/maku.png"
+  },
+  {
+    "slug": "Nesnelerin interneti tabanlı akıllı çocuk odası",
+    "title": "MAKU-SE",
+    "summary": "IoT based smart child room",
+    "tags": ["Kotlin", " ", "PostgreSQL"],
+    "links": {
+      "demo": "#",
+      "repo": "https://github.com/iYigitOnay/SmartChildRoom"
+    },
+    "cover": "/makuse.jpg"
+  }
+]

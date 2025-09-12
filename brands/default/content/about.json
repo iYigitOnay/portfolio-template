@@ -1,0 +1,12 @@
+{
+  "name": "İhsan Yiğit Önay",
+  "title": "Software Engineer",
+  "summary": "🎓 I am a third-year Software Engineering student at Mehmet Akif Ersoy University, with a strong dedication to back-end development. Previously, I worked on front-end technologies such as React (Next.js, JavaScript, TypeScript), Tailwind CSS, CSS3, and HTML5. I also have experience in object-oriented programming with Java.📌 My passion for software engineering goes beyond technical skills—I continuously strive to improve my problem-solving, leadership, and discipline. Before transferring to my current university, I was a candidate naval cadet at the National Defence University (MSU), which taught me the value of responsibility and self-discipline.👨‍💻 I am an active member of both the IEEE MAKÜ and MAKÜSE (Software and IT Community) student organizations. I currently lead a team in a TÜBİTAK 2209-A funded project titled “IoT-Based Smart Kids’ Room,” where I contribute both technically and as a coordinator. 🌍 I am fluent in English and actively learning French. As a curious and motivated software developer, I am passionate about creating value—both independently and within a team—and continuously improving myself to become the best in my field.",
+  "social": [
+    { "label": "GitHub", "href": "https://github.com/iYigitOnay" },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/ihsan-yigit-onay"
+    }
+  ]
+}

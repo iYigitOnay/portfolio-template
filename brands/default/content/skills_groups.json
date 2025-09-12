@@ -1,0 +1,36 @@
+{
+  "software": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "REST",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Tailwind",
+    "Java",
+    "Git",
+    "MySQL",
+    "Python"
+  ],
+  "design": [
+    "Figma",
+    "Photoshop",
+    "Word",
+    "Excel",
+    "PowerPoint",
+    "Canva",
+    "adobe illustrator"
+  ],
+
+  "personality": [
+    "Leadership",
+    "Teamwork",
+    "Problem Solving",
+    "Communication",
+    "Time Management"
+  ]
+}
