@@ -21,7 +21,10 @@ export type Project = {
 export type About = {
   name: string;
   title: string;
-  summary: string;
+  summary1: string;
+  summary2: string;
+  summary3: string;
+  summary4: string;
   social?: { label: string; href: string }[];
 };
 

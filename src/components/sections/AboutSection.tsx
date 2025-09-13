@@ -19,7 +19,18 @@ export function AboutSection() {
       </h2>
 
       {/* Tam genişlik metin */}
-      <p className="mt-4 opacity-80 text-lg leading-relaxed">{about.summary}</p>
+      <p className="mt-4 opacity-80 text-lg leading-relaxed">
+        {about.summary1}
+      </p>
+      <p className="mt-4 opacity-80 text-lg leading-relaxed">
+        {about.summary2}
+      </p>
+      <p className="mt-4 opacity-80 text-lg leading-relaxed">
+        {about.summary3}
+      </p>
+      <p className="mt-4 opacity-80 text-lg leading-relaxed">
+        {about.summary4}
+      </p>
 
       {/* 3’lü yetenek kartları (mavi, ince border kalsın) */}
       <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
