@@ -1,0 +1,7 @@
+{
+  "name": "The Neural Architect Portfolio",
+  "description": "A sophisticated portfolio for a Backend & AI Engineer featuring an interactive terminal, system architecture visualizations, and a Gemini-powered AI playground.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
