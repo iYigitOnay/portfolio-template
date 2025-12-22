@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
       "Android SDK",
     ],
     ai: ["Sensor Data Analysis", "Threshold Algorithms", "Event Detection"],
-    architectureImageUrl: "../img/kadis.jpeg",
+    architectureImageUrl: "img/kadis.jpeg",
     githubUrl: "https://github.com/redusx/kadis",
   },
   {
@@ -52,7 +52,7 @@ export const PROJECTS: Project[] = [
     ],
     backend: ["Kotlin/Python", "MQTT Broker", "Node.js", "Raspberry Pi"],
     ai: ["Anomaly Detection", "Time-series Analysis", "Automation Logic"],
-    architectureImageUrl: "../img/tubitak.jpg",
+    architectureImageUrl: "img/tubitak.jpg",
     githubUrl: "https://github.com/iYigitOnay/SmartChildRoom",
   },
   {
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
       "Recommendation Logic (Basic)",
       "User Behavior Analysis",
     ],
-    architectureImageUrl: "../img/makutalk.png",
+    architectureImageUrl: "img/makutalk.png",
     githubUrl: "https://github.com/iYigitOnay/MAKUtalk",
   },
   {
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
       "Prompt Engineering",
       "Large Language Models",
     ],
-    architectureImageUrl: "../img/melygrandmomstories.png",
+    architectureImageUrl: "img/melygrandmomstories.png",
     githubUrl: "https://github.com/iYigitOnay/MELYgrandmomstories",
   },
 ];
@@ -155,7 +155,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "TÜBİTAK 2209-A projeleri üzerinden akademik standartlarda ürün geliştirme deneyimi.",
     date: "Ekim 2024",
     readTime: "10 min",
-    category: "Ar-Ge"
+    category: "Ar-Ge",
   },
   {
     id: "2",
