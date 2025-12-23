@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
+import MobileMenu from "./components/MobileMenu";
 import Hero from "./components/TerminalHero";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
@@ -15,9 +16,12 @@ import {
 import { motion } from "framer-motion";
 
 const App: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen selection:bg-blue-600 selection:text-white">
-      <Navbar />
+      <Navbar onMenuClick={() => setIsMenuOpen(true)} />
+      <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
 
       <main>
         <Hero />

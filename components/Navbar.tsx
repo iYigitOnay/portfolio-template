@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Github, Linkedin, Mail, Menu } from "lucide-react";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onMenuClick: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -11,9 +14,20 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+    e.preventDefault();
+    const element = document.querySelector(target);
+    if (element) {
+      window.scrollTo({
+        top: element.getBoundingClientRect().top + window.scrollY - 100,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-40 transition-all duration-300 ${
         isScrolled
           ? "bg-white/80 backdrop-blur-md py-4 shadow-sm border-b border-blue-50"
           : "bg-transparent py-8"
@@ -32,11 +46,19 @@ const Navbar: React.FC = () => {
 
         <div className="flex items-center gap-12">
           <div className="hidden lg:flex items-center gap-10 text-[12px] font-bold uppercase tracking-[0.2em] text-slate-500">
-            {["Stack", "Projects", "Blog"].map((item) => (
+            {["Stack", "Projects", "Blog", "CV"].map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={
+                  item === "CV" ? "/img/turkce_tam_cv.pdf" : `#${item.toLowerCase()}`
+                }
+                download={item === "CV" ? "ihsan_yigit_onay_cv.pdf" : undefined}
                 className="hover:text-blue-600 transition-colors"
+                onClick={(e) => {
+                  if (item !== "CV") {
+                    handleLinkClick(e, `#${item.toLowerCase()}`);
+                  }
+                }}
               >
                 {item}
               </a>
@@ -67,36 +89,13 @@ const Navbar: React.FC = () => {
             </a>
             <button
               className="lg:hidden text-slate-900"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={onMenuClick}
             >
               <Menu className="w-6 h-6" />
             </button>
           </div>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className="lg:hidden bg-white/80 backdrop-blur-md py-4">
-          <div className="max-w-7xl mx-auto px-8 flex flex-col items-center gap-4 text-center">
-            {["Stack", "Projects", "Blog"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-slate-500 hover:text-blue-600 transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item}
-              </a>
-            ))}
-            <a
-              href="mailto:ihsanyigitonay@gmail.com"
-              className="mt-4 inline-flex items-center justify-center px-6 py-2.5 bg-slate-900 text-white hover:bg-blue-600 rounded-xl text-xs font-bold tracking-widest uppercase transition-all shadow-lg hover:shadow-blue-200"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              İletişim
-            </a>
-          </div>
-        </div>
-      )}
     </nav>
   );
 };

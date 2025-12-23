@@ -154,7 +154,7 @@ const Hero: React.FC = () => {
       <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        className="absolute bottom-12 text-blue-400"
+        className="absolute bottom-16 text-blue-400 z-30"
       >
         <ArrowDown className="w-6 h-6" />
       </motion.div>
