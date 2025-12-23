@@ -55,7 +55,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
             <div className="p-8">
               <div className="flex justify-between items-center mb-12">
                 <h2 className="text-2xl font-bold text-slate-900">Menu</h2>
-                <button onClick={() => setIsOpen(false)} className="text-slate-500 hover:text-slate-900">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="text-slate-500 hover:text-slate-900"
+                >
                   <X className="w-8 h-8" />
                 </button>
               </div>
@@ -65,10 +68,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
                     key={item}
                     href={
                       item === "CV"
-                        ? "/img/turkce_tam_cv.pdf"
+                        ? "public/my_cv.pdf"
                         : `#${item.toLowerCase()}`
                     }
-                    download={item === "CV" ? "ihsan_yigit_onay_cv.pdf" : undefined}
+                    download={
+                      item === "CV" ? "ihsan_yigit_onay_cv.pdf" : undefined
+                    }
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 + i * 0.1 }}
@@ -85,12 +90,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
               </div>
             </div>
             <div className="absolute bottom-8 left-8 right-8">
-               <a
-              href="mailto:ihsanyigitonay@gmail.com"
-              className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-900 text-white hover:bg-blue-600 rounded-xl text-sm font-bold tracking-widest uppercase transition-all shadow-lg hover:shadow-blue-200"
-            >
-              İletişim
-            </a>
+              <a
+                href="mailto:ihsanyigitonay@gmail.com"
+                className="w-full inline-flex items-center justify-center px-6 py-4 bg-slate-900 text-white hover:bg-blue-600 rounded-xl text-sm font-bold tracking-widest uppercase transition-all shadow-lg hover:shadow-blue-200"
+              >
+                İletişim
+              </a>
             </div>
           </motion.div>
         </motion.div>

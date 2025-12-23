@@ -14,7 +14,10 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    target: string
+  ) => {
     e.preventDefault();
     const element = document.querySelector(target);
     if (element) {
@@ -50,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
               <a
                 key={item}
                 href={
-                  item === "CV" ? "/img/turkce_tam_cv.pdf" : `#${item.toLowerCase()}`
+                  item === "CV" ? "public/my_cv.pdf" : `#${item.toLowerCase()}`
                 }
                 download={item === "CV" ? "ihsan_yigit_onay_cv.pdf" : undefined}
                 className="hover:text-blue-600 transition-colors"
@@ -87,10 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             >
               İletişim
             </a>
-            <button
-              className="lg:hidden text-slate-900"
-              onClick={onMenuClick}
-            >
+            <button className="lg:hidden text-slate-900" onClick={onMenuClick}>
               <Menu className="w-6 h-6" />
             </button>
           </div>
