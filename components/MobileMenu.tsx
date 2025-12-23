@@ -67,7 +67,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
                   <motion.a
                     key={item}
                     href={
-                      item === "CV" ? "/my_cv.pdf" : `#${item.toLowerCase()}`
+                      item === "CV" ? "my_cv.pdf" : `#${item.toLowerCase()}`
                     }
                     download={
                       item === "CV" ? "ihsan_yigit_onay_cv.pdf" : undefined
