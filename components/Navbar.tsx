@@ -52,9 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             {["Stack", "Projects", "Blog", "CV"].map((item) => (
               <a
                 key={item}
-                href={
-                  item === "CV" ? "public/my_cv.pdf" : `#${item.toLowerCase()}`
-                }
+                href={item === "CV" ? "/my_cv.pdf" : `#${item.toLowerCase()}`}
                 download={item === "CV" ? "ihsan_yigit_onay_cv.pdf" : undefined}
                 className="hover:text-blue-600 transition-colors"
                 onClick={(e) => {
