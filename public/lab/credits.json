@@ -1,0 +1,48 @@
+[
+ {
+  "file": "assets/istanbul-skyline-at-night.jpg",
+  "media": "image",
+  "ref": "openverse:964599e3-5557-495b-bd60-88814fed0cce",
+  "title": "Istanbul skyline at night",
+  "creator": "Hakan Sarıtaş",
+  "creatorUrl": "https://www.flickr.com/people/51832819@N08",
+  "date": null,
+  "license": "CC BY 2.0",
+  "licenseCode": "by",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/w/index.php?curid=26129572",
+  "via": "Wikimedia Commons",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Istanbul_skyline_at_night.jpg/1920px-Istanbul_skyline_at_night.jpg",
+  "width": 1920,
+  "height": 1275,
+  "bytes": 479434,
+  "credit": "\"Istanbul skyline at night\" by Hakan Sarıtaş, CC BY 2.0, via Wikimedia Commons",
+  "notes": [],
+  "saved": "2026-11-27T13:15:30.152Z"
+ },
+ {
+  "file": "assets/galata-tower-67m.jpg",
+  "media": "image",
+  "ref": "openverse:4e526bdf-97bf-4228-a9cf-7fcf4d3f993a",
+  "title": "Galata Tower (67m.)",
+  "creator": "Jorge Láscar",
+  "creatorUrl": "https://www.flickr.com/people/8721758@N06",
+  "date": null,
+  "license": "CC BY-SA 2.0",
+  "licenseCode": "by-sa",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/w/index.php?curid=25207044",
+  "via": "Wikimedia Commons",
+  "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Galata_Tower_%2867m.%29.jpg/1920px-Galata_Tower_%2867m.%29.jpg",
+  "width": 1920,
+  "height": 1275,
+  "bytes": 731474,
+  "credit": "\"Galata Tower (67m.)\" by Jorge Láscar, CC BY-SA 2.0, via Wikimedia Commons",
+  "notes": [
+   "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+  ],
+  "saved": "2026-11-27T13:15:32.162Z"
+ }
+]
