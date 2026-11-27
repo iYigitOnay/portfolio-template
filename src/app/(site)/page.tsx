@@ -55,7 +55,7 @@ export default async function Home() {
         </div>
         <aside className="s-side s-plinthWrap s-heroFade" style={dl(4)} id="api" aria-label="Canlı API">
           <div className="s-plinth" data-tilt>
-            <p className="s-plinthNote">Bu sitenin kendi API&apos;si. Bir kaynak seçin, yanıt veritabanından gelsin.</p>
+            <p className="s-plinthNote">Bu sitenin kendi API&apos;si. Bir kaynak seçin, yanıtı canlı olarak görün.</p>
             <LiveEndpoint initial="profile" maxLines={22} cls={{ root: "s-api", tabs: "s-apiTabs", tab: "s-apiTab", meta: "s-apiMeta", pre: "s-apiPre" }} />
           </div>
         </aside>

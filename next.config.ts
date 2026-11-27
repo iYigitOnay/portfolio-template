@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // İçerik dosyaları derlemede okunur; sunucu fonksiyonlarına da dahil olsun.
+  outputFileTracingIncludes: { "/**": ["./content/**/*"] },
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {

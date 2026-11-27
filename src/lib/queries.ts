@@ -10,6 +10,11 @@ import { profile, skillGroups } from "@/content/profile";
  */
 
 const CONTENT = path.join(process.cwd(), "content");
+/** Geliştirirken dosya değişiklikleri birkaç saniyede görünsün; canlıda derleme anı esas. */
+function life() {
+  if (process.env.NODE_ENV === "development") cacheLife("seconds");
+  else cacheLife("max");
+}
 
 export type Project = {
   id: string;
@@ -66,13 +71,13 @@ async function readDir(dir: string) {
 
 export async function getProfile() {
   "use cache";
-  cacheLife("max");
+  life();
   return profile;
 }
 
 export async function getPublishedProjects(): Promise<Project[]> {
   "use cache";
-  cacheLife("max");
+  life();
   const rows = await readDir("projects");
   return rows
     .filter(({ data }) => data.draft !== "true")
@@ -99,13 +104,13 @@ export async function getPublishedProjects(): Promise<Project[]> {
 
 export async function getProjectBySlug(slug: string) {
   "use cache";
-  cacheLife("max");
+  life();
   return (await getPublishedProjects()).find((p) => p.slug === slug);
 }
 
 export async function getPublishedPosts(): Promise<Post[]> {
   "use cache";
-  cacheLife("max");
+  life();
   const rows = await readDir("posts");
   return rows
     .filter(({ data }) => data.draft !== "true")
@@ -126,13 +131,13 @@ export async function getPublishedPosts(): Promise<Post[]> {
 
 export async function getPostBySlug(slug: string) {
   "use cache";
-  cacheLife("max");
+  life();
   return (await getPublishedPosts()).find((p) => p.slug === slug);
 }
 
 export async function getSkills(): Promise<Skill[]> {
   "use cache";
-  cacheLife("max");
+  life();
   return skillGroups.flatMap(([category, names]) => names.map((name) => ({ id: `${category}/${name}`, name, category })));
 }
 

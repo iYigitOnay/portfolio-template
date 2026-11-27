@@ -17,7 +17,7 @@ describe('footer', () => {
     await expect(footer.getByText('Geliştiriciler')).toBeVisible()
     await expect(footer.getByRole('link', 'LinkedIn')).toBeVisible()
     await expect(footer.getByText('© 2026 İhsan Yiğit Önay. Tüm hakları saklıdır.')).toBeVisible()
-    await expect(footer.getByText('Next.js, Drizzle ve libSQL ile yapıldı')).toBeVisible()
+    await expect(footer.getByText('Next.js ile yapıldı')).toBeVisible()
   })
 
   test('reveals the footer when scrolled into view', async ({ screen }) => {

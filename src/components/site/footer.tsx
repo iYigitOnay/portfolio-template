@@ -64,7 +64,7 @@ export function Footer({ d }: { d: SiteData }) {
 
         <div className="s-footMeta">
           <span className="s-footPlace">{profile.location} · <IstanbulClock /></span>
-          <span className="s-footStack">Next.js, Drizzle ve libSQL ile yapıldı</span>
+          <span className="s-footStack">Next.js ile yapıldı</span>
           <span className="s-footTools">
             <ThemeToggle className="s-iconBtn" />
             <a href="#" className="s-toTop" data-to-top aria-label="Başa dön">
